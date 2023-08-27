@@ -17,7 +17,7 @@ public class DeliveryCardTest {
     public void shouldSuccessForm() {
         open("http://localhost:9999");
         $("[data-test-id='city'] input").setValue("Новосибирск");
-        String planningDate = generateDate(4, "dd.mm.yyyy");
+        String planningDate = generateDate(4, "dd.MM.yyyy");
         $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.DELETE);
         $("[data-test-id='date'] input").setValue(planningDate);
         $("[data-test-id='name'] input").setValue("Казакова Наталья");
